@@ -1,0 +1,27 @@
+%% define a new envrionment which marries longtable with tabulary
+% from http://tex.stackexchange.com/questions/78075/multi-page-with-tabulary (see there for usage)
+% with modifications taken from the ltxtable package to make captions work
+\makeatletter
+\newcommand*\TY@cap@gobble[2][]{\\}% from ltxtable (adjusted)
+\def\ltabulary{%
+	\def\caption{% from ltxtable (adjusted)
+		\@ifstar\TY@cap@gobble\TY@cap@gobble}
+	\def\endfirsthead{\\}%
+	\def\endhead{\\}%
+	\def\endfoot{\\}%
+	\def\endlastfoot{\\}%
+	\def\tabulary{%
+		\def\TY@final{%
+			\def\endfirsthead{\LT@end@hd@ft\LT@firsthead}%
+			\def\endhead{\LT@end@hd@ft\LT@head}%
+			\def\endfoot{\LT@end@hd@ft\LT@foot}%
+			\def\endlastfoot{\LT@end@hd@ft\LT@lastfoot}%
+			\longtable}%
+		\let\endTY@final\endlongtable
+		\TY@tabular}%
+	\dimen@\columnwidth
+	\advance\dimen@-\LTleft
+	\advance\dimen@-\LTright
+	\tabulary\dimen@}
+\def\endltabulary{\endtabulary}
+\makeatother

@@ -1,0 +1,68 @@
+\section{Study}
+\label{sec:study}
+
+Based on the experiment concepts introduced earlier, we designed a study to test our hypothesis, that using props increases anxiety of sport climbers when climbing in \gls{VR} and, therefore, their sense of presence, see Section \ref{sec:hypothesis}. To examine this effect, we created two different modes of climbing in \gls{VR}, one with props and one without, see Section \ref{sec:impl}.
+
+% p o. r - pearsonscher Korrelationskoeffizient [-1.0: Effekt ~ 1/Auslöser; +1.0: Effekt ~ Auslöser]
+% d - effect stregth [0.3-0.5: small; 0.5-0.8: medium; > 0.8: strong effect]
+% tails - 1: directed hypothesis; 2: non-directed hypothesis (split confidence/alpha niveau by two)
+% type-1-error $\alpha$ - p(reject $H_0$|$H_0$ is true) for example $H_0$: result = avg; $\alpha$ to low $\rightarrow$ chance of type-2-error increases
+% type-2-error $\beta$ - p(retain $H_0$|$H_0$ is false) $\rightarrow$ increase sample size
+% treatment - same as condition in context of an repeated measures ANOVA
+
+Since anxiety is highly subjective and varies considerably between participants, a within-subject experimental study was chosen to test our hypothesis, in alignment with the designs of earlier, similar studies summarized in \namedvref{sec:related-work}.
+
+\subsection{Variables and Conditions}
+\label{sec:variables-conditions}
+
+Our study design stipulates two independent variables: \textbf{\sffamily \namedlabel{iv:props}{I\textsubscript{p}}} props $\in$ \{with; without\}, and
+\textbf{\sffamily \namedlabel{iv:vision}{I\textsubscript{v}}} vision $\in$ \{real; virtual\}. With three conditions, see Table \vref{tab:conditions}, we wanted to examine their effect on the following dependent variables: \textbf{\sffamily \namedlabel{dv:exertion}{D\textsubscript{e}}} physical exertion, \textbf{\sffamily \namedlabel{dv:anxiety}{D\textsubscript{a}}} anxiety, and
+\textbf{\sffamily \namedlabel{dv:presence}{D\textsubscript{p}}} presence. The order of the conditions was randomized using a Williams Design \autocites{LatinSquaresWilliams}[based on][]{Williams1949}, so we ended up with six different permutations.
+
+\input{./include/figures/conditions}
+
+\subsection{Measurements} 
+\label{sec:study-measurements}
+
+The sense of presence in \gls{VR} is normally measured with questionnaires, behavioral analysis, or physiological measures \autocite[\ppno 13]{Slater2007}. We went with the first two options an in alignment with \textcite{Slater2007,Slater2004a}, and regarded stress and anxiety as indicators of presence for this experiment.
+
+\input{./include/figures/measurements}
+
+Our primary stress and anxiety measures were \glsfirst{HRV} \autocite{Castaldo2015, Hynynen2009} and \glsfirst{SCR} \autocite{Brouwer2014,Meehan2001}. Additionally, presence was measured using the widespread \glsfirst{IPQ} with the following scales 
+\begin{inlinelist}
+	\item \textit{spatial presence (sp),} the sense of being physically present in the VE
+	\item \textit{involvement (inv),} the attention devoted to the VE and the involvement experienced
+	\item \textit{experienced realism (real),} the subjective experience of realism in the VE 
+\end{inlinelist} \autocite{IPQ2016,VanBaren2004}.
+
+\textcite{Meehan2001} also suggest using \gls{HR}, \gls{RR}, and \gls{EDA} as indicators for presence. Regarding sport climbers, \textcite{Hardy2007} reckon that those signals---when elevated---may be interpreted as signs of somatic anxiety, too. However, \gls{HR} and \gls{RR} cannot be described as unitary functions of arousal, because they are also functions of movement \autocites{Croft2004}[based on][]{Obrist1981}. Hence, they can only be interpreted as indicators for somatic anxiety when comparing conditions with a similar level of movement. In our setup these are only \ref{cd:A} and \ref{cd:B}. As a control variable for the level of movement, we also asked the subjects to give a \glsfirst{RPE}, on a labeled \glsfirst{VAS} from 6 to 20, developed by \textcite{Borg2004}.
+
+ For measuring the severity of acrophobia of our subjects, we employed the \glsfirst{vHI} questionnaire by \textcite{Huppert2017}. To meter the a priori trait anxiety of subjects we used the \glsfirst{STAI} by \textcite{Grimm2009}. After each condition, we also tested the manifestation of anxiety at the level of subjective experience through a \gls{VAS} called \glsfirst{AT} \autocites{Houtman1989}[also called fear thermometer by][]{Antony2005}. This is a quick and validated alternative to more comprehensive tools such as \gls{SUDS}, or \gls{CSAI-2} \autocite{Pijpers2006}. It is a continuous scale ranging from 0 (not anxious at all) to 10 (extremely anxious) displayed as a box of \SI{10}{\centi\meter} length, in which participants place a mark to indicate their level of anxiety \autocite{Houtman1989}.
+
+\subsection{Procedure and Tasks}
+
+Our experiment procedure included the following steps
+\begin{inlinelist}
+	\item briefing
+	\item put on climbing harness 
+	\item fit with \gls{HR}, \gls{RR}, and \gls{EDA} electrodes
+	\item initial rest (\ref{cd:0}) and upfront questionnaires
+	\item conditions \ref{cd:A}, \ref{cd:B}, and \ref{cd:C}
+	\item debriefing
+\end{inlinelist}. After each condition the participants had time to recuperate while filling in the questionnaires, see also Table \vref{tab:measuremets}.
+
+The primary task for all conditions was traversing a climbing wall, from a start point to a return point and back. The subjects were only belayed in condition \ref{cd:A} utilizing an auto-belay-device. To ensure that the participants are aware of their exposition to height, we introduced secondary tasks:
+\begin{inlinelist}
+	\item \textit{before climbing,} throw a ball down to the ground and read out the number displayed next to the impact site
+	\item \textit{while resting at the return point,} look down and read out numbers shown near the ground floor.
+\end{inlinelist}
+
+\subsection{Sample Composition}
+
+Selecting an appropriate sample size is a crucial step in designing a successful study \autocite{Guo2013}. Therefore, we used the tool \href{http://glimmpse.samplesizeshop.org/}{GLIMMPSE}, developed by \citeauthor{Guo2013}, to calculate an appropriate sample size. The output listed in Table \vref{tab:glimmpse} is based on the outcome of similar, climbing-related experiments by \textcite{Hardy2007}. In this particular study, they analyzed seven dependent variables with four repeated measures. To reproduce these results with a maximum type \RN{1} error of α = 0.05 and a power > 0.8, a minimum sample of 11 is required. In contrast, a worst case scenario---with less different mean values and higher variance---would require a minimum sample of 28.
+
+\input{./include/figures/sample-size}
+
+Besides GLIMMPSE, \href{http://www.gpower.hhu.de/}{G*Power 3.1} was used to calculate an appropriate sample size for testing single pairs using univartiate \gls{ANOVA}. With α = 0.05, power > 0.8, and an assumed effect size \autocite[cf.][]{Cohen1988} d > 1.2 (based on the results of the GLIMMPSE analysis), the sample size ranges from 11 to 14, for nonsphericity correction ε between 1.0 and 0.75 (worst case, compare \textcite{PowerGuide}). Table \ref{tab:gpower} shows even worse scenarios, with a weaker effect of d = 0.7. Those would require 24 to 26 participants, and, therefore, we wanted to get 24 to 30 participants, to run each of the six permutations of condition order (see also \namedvref{sec:variables-conditions}) equally frequent.
+
+To forestall effects of skill-imposed self-confidence \autocite{Hardy2007}, we wanted a sample with climbers of average skill level, which correlates to a range from 5+ to 7+, according to the manager of the local climbing gym where the experiment was hold.

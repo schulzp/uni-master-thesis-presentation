@@ -1,0 +1,12 @@
+Effect size f(V),0.7
+α err prob,0.05
+Power (1-β err prob),0.8
+Number of groups,1
+Number of measurements,4
+Nonsphericity correction ε,1
+Noncentrality parameter λ,11.7600000
+Critical F,2.7374923
+Numerator df,3.0000000
+Denominator df,69.0000000
+Total sample size,24
+Actual power,0.8082196

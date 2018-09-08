@@ -1,0 +1,41 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{landscape}
+\begin{table}[!b]
+\centering
+\caption[Results: measurements]{Overview of the measured values for the conditions \ref{cd:0} to \ref{cd:C}; N varies due to incomplete or missing recordings and answers}
+\label{tab:measurement-results}
+\tablestyle{%
+	\begin{tabu}  to \textheight {%
+			@{}
+			X[1]
+			S[table-format=2]
+			S[table-format=3.2]
+			S[table-format=3.2]
+			S[table-format=3.2]
+			S[table-format=3.2]
+			S[table-format=3.2]
+			S[table-format=3.2]
+			S[table-format=3.2]
+			S[table-format=3.2]
+			@{}}
+		\toprule
+      &    & \multicolumn{2}{l}{\textbf{\ref{cd:0}}} & \multicolumn{2}{l}{\textbf{\ref{cd:A}}} & \multicolumn{2}{l}{\textbf{\ref{cd:B}}} & \multicolumn{2}{l}{\textbf{\ref{cd:C}}} \\
+		\textbf{Measurement}    & \multicolumn{1}{l}{\textbf{N}}  & \multicolumn{1}{l}{\textbf{Mean}}      & \multicolumn{1}{l}{\textbf{SD}}        & \multicolumn{1}{l}{\textbf{Mean}}      & \multicolumn{1}{l}{\textbf{SD}}        & \multicolumn{1}{l}{\textbf{Mean}}      & \multicolumn{1}{l}{\textbf{SD}}        & \multicolumn{1}{l}{\textbf{Mean}}      & \multicolumn{1}{l}{\thead{SD}} \\\midrule
+		duration (s) & 23 & 418.72 & 281.24 & 231.08 & 62.84 & 358.75 & 133.47 & 310.84 & 106.76\\
+		\gls{HR} from \gls{ECG} (bpm)   & 23 & 86.11     & 13.27     & 108.71    & 11.50     & 108.07    & 9.71      & 98.42     & 15.33     \\
+		\gls{HR} from Chest Strap (bpm) & 22 & 79.75     & 11.77     & 107.82    & 16.91     & 102.96    & 15.62     & 88.18     & 12.98     \\
+		\gls{RR} (Hz)        & 23 & 0.26      & 0.03      & 0.21      & 0.02      & 0.22      & 0.02      & 0.22      & 0.02      \\
+		\gls{HRV} \gls{mRRI} (ms)  & 21 & 769.40    & 132.89    & 700.43    & 195.72    & 605.63    & 78.50     & 708.70    & 174.20    \\
+		\gls{EDA} as \gls{SCR} peaks (count) & 22 & 8.00   & 3.30   & 5.80   & 2.25   & 6.26   & 2.34   & 6.51   & 2.02  \\
+		\textbf{\glspl{VAS}}            &    &           &           &           &           &           &           &           &           \\ \tabucline[sline]{1-10}
+		\gls{RPE} (6 to 20)            & 28 &           &           & 9.46      & 2.32      & 11.04     & 3.07      & 7.89      & 2.41      \\
+		\gls{AT} (0 to 10)            & 23 &           &           & 2.43      & 2.87      & 3.94      & 2.85      & 1.95      & 2.26      \\
+		\textbf{\gls{IPQ}}            &    &           &           &           &           &           &           &           &           \\ \tabucline[sline]{1-10}
+		general presence (PRES)           & 27 &           &           &           &           & 4.15      & 1.75      & 3.44      & 1.91      \\
+		spatial awareness (SP)             & 27 &           &           &           &           & 4.24      & 1.13      & 3.96      & 1.07      \\
+		involvement (INV)            & 27 &           &           &           &           & 3.44      & 1.54      & 3.76      & 1.40      \\
+		realness (REAL)           & 27 &           &           &           &           & 3.58      & 0.54      & 3.31      & 0.52      \\ \bottomrule
+	\end{tabu}}
+\end{table}
+\end{landscape}

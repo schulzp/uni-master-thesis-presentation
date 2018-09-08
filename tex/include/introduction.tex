@@ -1,0 +1,79 @@
+\section{Introduction}
+
+\epigraph{The fun is to tempt fate, not to join it, thus overcoming the fear of falling is\\the biggest challenge facing the climber.}{\textit{The Law of Gravity we all Obey\\Steve Chadwick}}
+
+Fear of falling is a common phenomenon among sport climbers. In contrast to acrophobia, a pathologically exaggerated fear of heights, fear of falling is a natural fear of getting hurt as a consequence of falling \autocite{Legters2002}. It is inherent to various mammals \autocite{Gibson1960} and not limited to frail, elderly humans \autocite{Suzuki2002} as widely believed.
+
+Concerning climbing, fear of falling is related to fear of heights, a genetically predisposed “preparedness” \autocites{Bertle2014}[based on][]{Armfield2006}. While being protective, it also holds back climbing athletes by impeding movements \autocite{Horst2017}. Especially with competitive sport climbing in mind, controlling such adverse effects on performance is desired \autocite{Hardy2007}. Traditionally, climbers learn to overcome their fear by building confidence, for instance, by habituation through controlled falling \autocite{Lloyd2014}.
+
+% preparedness:  \autocites{Bertle2014}[based on][]{Armfield2006,Poulton2002}
+% adverse effects: \autocite{Lloyd2014,Hardy2007,Hardy1996}, \autocite{Horst2017,Eppensteiner2016,Phillips2016,Chadwick2015,Missy2014}
+
+This approach resembles what is known as exposure therapy---the “gold[en] standard” in the field of psychotherapy. Starting in the mid-1990s, scientists began experimenting with \gls{VRET}, which gave them more control over the grading of exposure and reduced the inhibition threshold for a therapy \autocite{Powers2008}. With their pioneering study, \textcite{Emmelkamp2001} showed for the first time that exposure to heights in \gls{VR} achieves the same effects as in vivo therapy, a result that has been reproduced multiple times since then \autocite{Powers2008}. \pdfmargincomment[avatar=peter,style=korrektur-done]{überarbeitet}
+
+% VRET: \autocite{Rothbaum1995,Hodges1994}, \autocite{Powers2008,Emmelkamp2002}
+
+Inspired by these findings and being passionate sport climbers ourselves, we wanted to find out what it takes to create the fear of falling in sport climbers while climbing in a \gls{VE}. Therefore, we conducted an experiment to compare the manifestation of stress, anxiety, and presence at subjective and physiological level. We compared climbing using props (hand- and footholds) with controller-based interaction, whereby we observed higher subjective anxiety and presence for props. \pdfmargincomment[avatar=peter,style=korrektur-done]{überarbeitet}
+
+\subsection{Motivation and Hypothesis}
+\label{sec:hypothesis}
+
+Multiple studies have already shown that height is a stressor when climbing, and stress, in turn, is an indicator of presence in \glspl{VE}. For this study, we focus on the level of immersion-induced presence, required to provoke fear of falling, and therefore we create two different interaction modes: mixed reality (with real props), and pure virtual (only with game controllers).
+
+In alignment with \textcite{Meehan2001}, who observed a positive effect of props on presence, we created the following, directed hypothesis:
+
+\begin{hyp*}[H\textsubscript{a}\label{hyp:anxiety}]	
+	Presence (\ref{dv:presence}) \textbf{rises} for climbers in \gls{VR} when using props because props cause \textbf{higher} immersion and, therefore, \textbf{higher} anxiety (\ref{dv:anxiety}).
+	$\rightarrow$ \textbf{H\textsubscript{0}}: There is no measurable difference between mixed-reality climbing with props and pure \gls{VR} climbing with regular game controllers. \pdfmargincomment[avatar=peter,style=korrektur-done]{überarbeitet}
+\end{hyp*}
+
+The following sections describe the process of testing this hypothesis. We start with introducing necessary vocabulary and concepts and continue looking into causes and effects of fear in sport climbing as well as a \gls{VRET} approach for curing fear of heights. Section \ref{sec:related-work} summarizes the most important studies which we built our study upon, whose design, implementation, and results we discuss in the sections \ref{sec:impl} to \ref{sec:discussion}, respectively.
+ 
+\subsection{Arousal, Fear, Anxiety, Stress and Sport Climbing}
+
+\citeauthor{Breckner2013} describes fear as an essential factor in all levels of sport, from mass sport to elite sport \autocites[20]{Breckner2013}[based on][]{Hackfort1985}. \citeauthor{Breckner2013} carries on that the reasons for fear depend on the personality and quotes \textcite{Allmer1978}, who supposed that there are different trigger situations: risk, limitation or handicap, or failure (while feeling the pressure to succeed) \autocite[based on][]{Nitsch1976}, insecurity (when confronted with unknown situations significant for the subject), and competition.
+
+Fear is an essential warning signal. \textcite{Martens1987} distinguishes between somatic fear (can be felt) and cognitive fear (thoughts) which occur in combination. It is an individually varying, affective state of an organism that comes with a heightened activity of the autonomous nervous system. That state is also associated with increased self-awareness, feeling tense, threatened, or worried \autocites{Breckner2013}[based on][]{Krohne1996}. Fear is motivation and unpleasant emotion at once \autocites{Breckner2013}[based on][]{Woodman2001a,Hackfort1985}. For climbers it is unpleasant to face an imminent risk of falling and yet they are driven (motivated) to avoid the fall and conquer the crux. At the same time, it is linked to physiological arousal \autocite{Landers2001,Landers1980} with typical somatic symptoms like uneasiness, pale skin, and cold hands. Further, increased muscle tensions, \gls{RR}, urinary frequency, \gls{HR}, adrenaline/noradrenalin level, and sweating have been observed \autocite{Brand2010}. \textcite[148]{Rethorst2006} also considers specific behaviors such as fleeing and avoidance as typical fear reactions.\pdfmargincomment[avatar=peter,style=korrektur-done]{überarbeitet}
+
+\textcite{Pijpers2005} point out that confusion still surrounds \textit{arousal}, [\textit{fear}], \textit{anxiety}, and \textit{stress}. They follow \textcite{Landers2001} in saying that “Arousal refers to [\dots{}] a nondirective generalized bodily activation [\dots{}] and is thought to range from a comatose state to a state of extreme excitement as might be manifested in a panic attack”. Psychology-related literature further distinguishes between state anxiety (temporal) and trait anxiety (characteristic) \autocite{Hackfort1985}, whereby trait anxiety influences the likelihood of experiencing state anxiety \autocite{Krohne2010}.
+
+% \footnote{The disambiguation of fear and anxiety can be traced back even further to the \engordnumber{19} century Danish philosopher Sören Kierkegaard \autocite{Solle1983}}
+
+Anxiety again is triggered by threats perceived as uncontrollable or unavoidable \autocites[307]{Lewis2010}[78]{Schwenkmezger1989}. That trigger relates to the concept of stress, for which there have been multiple definitions over time. In his thesis on anxiety in extreme mountaineering, \textcite{Breckner2013} refers to the latest definition of stress as a relational concept \autocites{Krohne2010}[based on][]{lazarus1966psychological} where stress is the result of an individual evaluating a situation defined by an environment. This evaluation includes inner requirements (self-imposed goals) as well as outer requirements (for instance, trainer-imposed goals). Primarily the individual evaluates the impact of the environment for its well-being and, secondarily, it evaluates the necessary resources/skills and resulting chance of succeeding \autocite[based on][\pno~150]{Rethorst2006}.
+
+Since the beginning of the \engordnumber{20} century, research has been concerned with the effects of anxiety on performance in sports. Early experimental studies led to the hypothesis that there is a point of [anxiety-infused] activation resulting in peak performance. Later this idea was replaced by a theory of \gls{IZOF} that has been verified in several studies since \autocite{Ruiz2015}. \textcite{Bertle2014} quotes the work by \textcite{Masters2008,Liao2002}, who suggest that well-trained subconscious routines, such as movements, are processed more consciously under stress. Since falling back to an earlier learning stage requires a higher level of cognition, the error rate increases while the efficiency decreases \autocite[\textit{Theory of Reinvest, }][]{Masters2008}. Several experiments with climbers by \textcite{Pijpers2005,Pijpers2003} found evidence for this anxiety-related reduction in performance.
+
+Judging from the body of work examined, we based our thesis on the assumption that anxiety in sport climbing is a multidimensional phenomenon. We chose to focus mainly on one dimension: fear of falling, as it is verified to have a hindering effect on performance. Regarding terminology, this thesis is primarily concerned with \textit{anxiety}, and not with \textit{fear} or phobia. Hence, fear of falling becomes a synonym for anxiety of falling. \pdfmargincomment[avatar=peter,style=korrektur-done]{überarbeitet}
+
+\subsection{Anxiety Exposure---From In Vivo to In Virtuo}
+
+In her diploma thesis \citeauthor{Scharfenberger2012} summarizes three types of anxiety exposure used by therapists today:  
+\begin{itemize*}[itemjoin={{, }},itemjoin*={{, and }},noitemsep,nolistsep]
+	\item[\textit{in sensu,}] where exposition to stimuli is imagined 
+	\item[\textit{in vivo,}] the actual confrontation with stimuli
+	\item[\textit{in virtuo,}] utilizing exposure in the virtual space (where “in virtuo” is a neologism for “in virtual” which was coined by \textcite{Tisseau2008}).
+\end{itemize*}
+Subjects may be exposed to step-by-step increasing intensities of a stimulus or to full intensity from the beginning on \autocite[i.\,e. ”flooding”, ][]{Scharfenberger2012}. Although questioned, for example by \textcite{DeSilva1981}, in vivo exposure remains the “golden standard of treatment for specific phobias” \autocite{Emmelkamp2002}.
+
+During the mid-1990s, in virtuo exposure became increasingly relevant \autocites{Scharfenberger2012}[for example][]{Rothbaum1995, Rothbaum1995a} and finally \textcite{Emmelkamp2002} could show that in virtuo exposure is at least as useful as in vivo exposure in treating acrophobia patients. The intensity of fear caused by an in virtuo stimulus is apparently equal to that caused by its in vivo counterpart \autocite{Powers2008}. In virtuo exposure therapy---also called \gls{VRET}---uses \glspl{HMD}, headphones and even data gloves which shut out the “real world” in favor of computer generated signals to be seen, heard or felt. In combination with motion tracking, this creates “a sense of presence” for the subjects since they can navigate the \gls{VE} by moving around \autocite{Gregg2007}. Presence again is considered the defining factor for \gls{VRET} to work \autocite{Dinh1999,Hodges1994}. \pdfmargincomment[avatar=peter,style=korrektur-done]{überarbeitet}
+
+\subsubsection*{Being There---Immersion and Presence}
+
+In contrast to \textit{immersion}, which is a term rooted in 2D and 3D game design, \textit{presence} is a more recent measure that emerged in conjunction with \glspl{VR}/\glspl{VE}. Although there are distinct definitions throughout literature, both terms are sometimes used synonymously \autocite{McMahan2003}.
+
+In her essay \citetitle{McMahan2003}, \textcite{McMahan2003} references \textcite{Murray1997} for her definition of \textit{immersion} and identifies three conditions creating it
+\begin{inlinelist}
+	\item matching expectations of a subject and conventions of the \gls{VE}
+	\item non-trivial impact of user actions on the \gls{VE}
+	\item consistent conventions in the \gls{VE} even if they do not match reality \autocite{Sheridan2000}.
+\end{inlinelist}
+
+\citeauthor{Murray1997} thereby follows the definition of \textcite{Slater1997}, who describe \textit{immersion} as a feeling which depends on the technical possibilities of a \gls{VR} system and, therefore, is a measure of how realistic/consistent a \gls{VE} is perceived \autocite{Slater1997}. A more vivid (display resolution), inclusive (shutting out the real world), extensive (additional sensory modalities, for example, sound), and surrounding (field of view) display system enables deeper immersion. Contrary to this view, \textcite{Witmer1998} see \textit{immersion} as the own tendency to immerse oneself into a \gls{VE}.
+
+\textit{Presence}, in contrast, describes the feeling of “being there,” in other words being more present in the virtual world than in the real world \autocites[\ppno~68]{McMahan2003}[based on][237]{Bowman2004}[605]{Slater1997}. Both \citeauthor{McMahan2003,Slater1997} quote \textcite{Steuer1992} for the provenance of the term \textit{presence}. According to him, it is strongly linked to the rise of \glspl{VE} because they enable users to perceive two environments at once: the physical and the virtual one. Hence there is an unmediated perception creating  “presence” (physically being there) and a mediated perception---employing a communication medium---creating “telepresence” (i.\,e. \textit{presence}, being somewhere else). Further, \textcite{Ryan1999} suggests that \textit{presence} is created when “we experience what is made of information as being material” \autocite{Lombard2000}.
+
+\textcite{Witmer1998} found that \textit{immersion} and \textit{presence} are positively correlated with r = 0.24, so their immersive tendencies explain the sense of \textit{presence} \autocites[25]{Scharfenberger2012}[based on][238]{Witmer1998}. Following \textcites{Slater1997}, \textcite{Schubert2001} demarcate the concepts in terms of quantifiability:  “[\dots] immersion is objectively quantifiable, presence---or, more precisely, the sense of presence---is a subjective experience and only quantifiable by the user experiencing it,” and therefore they assume that \textit{presence} is a function of \textit{immersion} \autocite[267]{Schubert2001}.
+
+In their model of \textit{immersion}, \textit{presence}, and \textit{performance} \textcite{Bystrom1999} further suggest that high sensory fidelity (for example haptics) enables transformations (for instance movements) closer to the real world and in turn support \textit{presence} \autocites{Schubert2001}[based on][]{Bystrom1999,Barfield1995a}. Since then, multiple studies using active \autocite{Vonach2017} or passive props \autocite{Insko2001} found supporting evidence for this theory. Props allow for haptic (active) search \autocite{Witmer1998}, an aspect of “control of sensors” \autocite{Sheridan1992}. This loads on the “exploration” factor for interaction and immersion as described by \textcite{Schubert2001}. 
+
+Our experiment investigates fear of falling---anxiety resulting from feeling present in a presumably dangerous situation---at different levels of immersion. Presence is a function of immersion that is created by using more or less passive props. We measure immersion through the presence subscales for realness and exploration, respectively as suggested by \textcite{Schubert2001}. Presence is typically measured by questionnaires, behavioral analysis, or physiological measures \autocite[\ppno 13]{Slater2007}. \textcite{Slater2004a} notes though that---in general---presence questionnaires have no correlated physiological measures. So to measure presence, we also used the additional indicators of stress and anxiety.

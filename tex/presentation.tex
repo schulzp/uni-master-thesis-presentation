@@ -1,0 +1,140 @@
+\documentclass[11pt,aspectratio=169,
+xcolor={table},
+hyperref={
+hidelinks,
+pdfauthor={Peter Schulz},
+pdftitle={Effects of Physical Interaction While Sport Climbing in Virtual Reality - Comparing Different Levels of Presence},
+pdfsubject={Master Thesis},
+pdfkeywords={Sport Climbing;Virtual Reality;Mixed Reality;Passive Haptics;Presence},
+pdfencoding=auto},
+url={obeyspaces,spaces,hyphens}]{beamer}
+
+\usepackage{fontspec}
+\usepackage{polyglossia,csquotes}
+\setdefaultlanguage{german}
+
+\usetheme{metropolis}
+\usepackage{appendixnumberbeamer}
+
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+
+\usepackage{caption,subcaption}
+\usepackage[percent]{overpic}
+
+\usepackage{fontawesome}
+\usepackage{cancel}
+
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage[percent]{overpic}
+
+\usepackage[absolute,overlay]{textpos}
+\setlength{\TPHorizModule}{1mm}
+\setlength{\TPVertModule}{1mm}
+
+\usepackage{luatex85,fontspec,xspace}
+
+\usepackage[onlymath]{MinionPro}
+
+\usepackage[
+natbib,
+maxnames=4,
+maxcitenames=2,
+maxbibnames=4,
+maxitems=2,
+uniquelist=false,
+style=authoryear-comp,
+backend=biber,
+sorting=anyt,
+sortcites=false,
+sortlocale=en_US,
+hyperref=true,
+url=false,
+isbn=false,
+backref=false,
+giveninits=true,
+block=none]{biblatex}
+\bibliography{../master-thesis/tex/master-thesis}
+
+%fontspec
+\defaultfontfeatures{Ligatures=TeX}
+
+\setmainfont[
+Scale=MatchLowercase,
+Ligatures=TeX,
+Extension=.otf,
+UprightFont=*-Regular,
+ItalicFont=*-It,
+BoldFont=*-Semibold,
+BoldItalicFont=*-SemiboldIt
+]{Myriad Pro}
+
+\setsansfont[
+Scale=MatchLowercase,
+Ligatures=TeX,
+Extension=.otf,
+UprightFont=*-Regular,
+ItalicFont=*-It,
+BoldFont=*-Semibold,
+BoldItalicFont=*-SemiboldIt
+]{Myriad Pro}
+
+\setmonofont[Scale=MatchLowercase]{Consolas}
+
+%xcolor
+\definecolor{source}{gray}{.5}
+\definecolor{tracker}{RGB}{188,31,59}
+
+%overpic
+\newcommand{\rbox}[3]{
+	\put(#1,#2){\makebox(100,100)[rb]{#3}}
+}
+
+\setbeamercolor{palette secondary}{fg=tracker}
+\setbeamercolor{palette tertiary}{bg=tracker}
+\setbeamercolor{titlelike}{fg=tracker}
+\setbeamercolor{item}{fg=tracker}
+\setbeamercolor{block title}{fg=tracker}
+\setbeamercolor{title separator}{fg=tracker,bg=tracker}
+
+\usepackage{multirow,makecell,tabularx}
+
+\setbeamertemplate{title page}{
+	\begin{minipage}[b][\paperheight]{\textwidth}
+		\begin{textblock}{140}(10,7)
+				\begin{tabularx}{\textwidth}{@{}XX@{}}
+					\makecell[l]{\small\today\vspace{2mm}} &
+					\makecell[r]{\includegraphics[width=25mm]{include/images/uni-bremen-logo.pdf}}
+			\end{tabularx}
+		\end{textblock}
+		\ifx\inserttitlegraphic\@empty\else\usebeamertemplate*{title graphic}\fi
+		\vfill%
+		\ifx\inserttitle\@empty\else\usebeamertemplate*{title}\fi
+		\ifx\insertsubtitle\@empty\else\usebeamertemplate*{subtitle}\fi
+		\vspace*{51mm}
+		\usebeamertemplate*{title separator}
+		\vspace*{2mm}
+		\begin{tabularx}{0.795\textwidth}{@{\hspace{0.205\textwidth}}Xr@{}}
+			Peter Schulz & Prof. Dr. Rainer Malaka\\
+			\textcolor{gray}{Fakultät für Mathematik} & Prof. Dr. Johannes Schöning\\
+			\textcolor{gray}{und Informatik} & Dmitry Alexandrovsky\\
+		\end{tabularx}
+		\vfill
+		\vspace*{3mm}
+	\end{minipage}
+}
+
+\titlegraphic{\centering\includegraphics[width=0.6\textwidth]{include/images/title-headline.pdf}}
+
+\date{\today}
+
+\begin{document}
+	
+\maketitle
+
+\tableofcontents
+
+\input{include/frames}
+	
+\end{document}

@@ -1,0 +1,128 @@
+% Define "long-ing" key: 
+\glsaddkey* {longing}% key 
+{\glsentrylong{\glslabel}ing}% default value 
+{\glsentrylonging}% command analogous to \glsentrytext 
+{\Glsentrylonging}% command analogous to \Glsentrytext 
+{\glslonging}% command analogous to \glstext 
+{\Glslonging}% command analogous to \Glstext 
+{\GLSlonging}% command analogous to \GLStext
+
+%% Define "short-ing" key: 
+\glsaddkey* {shorting}% key 
+{\glsentryshort{\glslabel}ing}% default value 
+{\glsentryshorting}% command analogous to \glsentrytext 
+{\Glsentryshorting}% command analogous to \Glsentrytext 
+{\glsshorting}% command analogous to \glstext 
+{\Glsshorting}% command analogous to \Glstext 
+{\GLSshorting}% command analogous to \GLStext
+
+\newcommand{\glsing}[1]{%
+	\ifglsused{#1}{\glsshorting{#1}}{\glslonging{#1} (\glsshorting{#1})\glsunset{#1}}%
+}
+
+\newcommand{\Glsing}[1]{%
+	\ifglsused{#1}{\Glsshorting{#1}}{\Glslonging{#1} (\glsshorting{#1})\glsunset{#1}}%
+}
+
+\newcommand{\GLSing}[1]{%
+	\ifglsused{#1}{\GLSshorting{#1}}{\GLSlonging{#1} (\GLSshorting{#1})\glsunset{#1}}%
+}
+
+% [label][short-name][long-name]{gls-description}
+
+\providecommand{\newglsacronym}[4][]{
+\newglossaryentry{#2}{
+	type=\acronymtype,
+	name={#2},
+	description={#3#4},
+	first={#3 (#2)}, #1}
+}
+
+\newglossaryentry{free-solo}{name={free solo},description={Climbing without aid or protection. This typically means climbing without a rope \autocite{WikipediaClimbingTerms2018}}}
+
+\newglossaryentry{lead}{name={lead}, longing={lead climbing}, shorting=leading, description={A form of climbing in which the climber clips the belay rope into quickdraws or similar equipment attached to the wall by means of anchors. In traditional climbing, the climber also needs to place anchors and quickdraws. In sport climbing, the anchors are typically preplaced, and the quickdraws may either be preplaced or placed by the climber \autocite{WikipediaClimbingTerms2018}}}
+
+\newglossaryentry{top-rope}{name={top rope}, longing={top-rope climbing}, shorting={top-roping}, description={To belay from a fixed anchor point above the climb. Top-roping requires easy access to the top of the climb, by means of a footpath or scrambling \autocite{WikipediaClimbingTerms2018}. Is sometimes used as a synonym for \glsing{second}}}
+
+\newglossaryentry{second}{name=second, longing={climbing second}, shorting={seconding}, description={A climber who follows the lead, or first, climber \autocite{WikipediaClimbingTerms2018}. Is sometimes used as a synonym for \glsing{top-rope}}}
+
+\newglossaryentry{on-sight}{name=on-sight, longing={on-sight climbing}, shorting={on-sighting}, description={A clean ascent, with no prior practice or beta. For ascents on the first attempt with receiving beta see flash \autocite{WikipediaClimbingTerms2018}}}
+
+\newglossaryentry{cg-uk-adj}{type=\acronymtype, name={UK}, short={Brit. Adj.}, long={British Adjectival}, description={British grades for free climbing}}
+
+\newglossaryentry{cg-uiaa}{type=\acronymtype, name={UIAA}, short={UIAA}, long={UIAA}, description={\gls{UIAA} grades for free climbing}}
+\newglossaryentry{cg-fr}{name={French}, short={Fr.}, long={French}, description={French grades for free climbing}}
+
+\newacronym{UIAA}{UIAA}{International Climbing and Mountaineering Federation}
+
+% dual entries [options]{label}{short-name}{long-name}{description}
+
+\newglsacronym{RCAI}{Rock Climbing Anxiety Inventory}{ \autocite{Hardy2007}, an inventory consisting of five cognitive anxiety items, 11 somatic anxiety items, and eight activation items}
+
+\newglsacronym{CSAI-2}{Competitive State Anxiety Inventory~2}{ \autocite{Martens1990}, an inventory consiting of cognitive anxiety, and somatic anxiety items}
+
+\newglsacronym{IPQ}{Igroup Presence Questionnaire}{ \autocite{IPQ2016}, a scale for measuring the sense of presence experienced in a \gls{VE}}
+
+\newglsacronym{RPE}{rating of perceived exertion}{ \autocite{Borg1982}}
+
+\newglsacronym{PME}{physical and mental exertion}{, a single question with an 11-point Likert scale \autocite[151]{Hardy2007}}
+
+\newglsacronym{AISS}{Arnett Inventory of Sensation Seeking}{ \autocite{Roth2003, Zuckerman2006}}
+
+\newglsacronym{CPEI}{Climbing Performance Evaluation Inventory}{ \autocite{Hardy2007}}
+
+\newglsacronym{WAI}{Wettkampfangst Inventory}{ \autocite{Brand2009a}}
+
+\newglsacronym{STAI}{State Trait Anxiety Inventory}{ \autocite{Spielberger1970}}
+
+\newglsacronym{vHI}{visual height intolerance}{ \autocite{Huppert2017}, a new questionnaire for estimating the severity of visual height intolerance and acrophobia by a metric interval scale}
+
+\newglsacronym{WAI-T}{Wettkampfangst Inventory (Trait)}{, trait version of the \gls{WAI}  \autocite{Brand2009}}
+
+\newglsacronym{AHR}{additional heart rate}{, measure for physical stress based on residual of predicted/expected and actual \gls{HR} \autocite{Bertle2014, Myrtek2005}}
+
+\newglsacronym{GAF}{Genfer Appraisal Fragebogen}{, an inventory to capture emotions in appraisal of an event in the past \autocite{Scherer2009, Scherer2001}}
+
+\newglsacronym{EMG}{electromyography}{, the graphing and study of the electrical characteristics of muscles}
+
+\newglsacronym{EDA}{electrodermal activity}{, see also \gls{SC}}
+
+\newglsacronym{mRRI}{mean R-R interval}{, distance between R-peaks in an \gls{ECG} and a measure of \gls{HRV}}
+
+\newglsacronym{PANAS}{positive and negative affect scales}{, a 20-item self-report measure specifically designed to assess the distinct dimensions of positive and negative affect \autocite[\ppno~64]{Antony2005}}
+
+\newglsacronym{NSR}{non-specific response}{, a category of \glspl{SCR}}
+
+\newglsacronym{SC}{skin conductivity}{, measured in \si{\micro\siemens}, see also \gls{EDA}}
+
+\newacronym{VRET}{VRET}{\gls{VR} therapy}
+\newacronym{VR}{VR}{virtual reality}
+\newacronym{VE}{VE}{virtual environment}
+\newacronym{MR}{MR}{mixed realtity}
+\newacronym{HR}{HR}{heart rate}
+\newacronym{ECG}{ECG}{electrocardiography}
+\newacronym{SCR}{SCR}{skin conductivity response}
+\newacronym{HRV}{HRV}{heart rate variabilty}
+\newacronym{RR}{RR}{resperatory rate}
+\newacronym{AT}{AT}{anxiety thermometer}
+\newacronym{ANOVA}{ANOVA}{analysis of variance}
+\newacronym{MANOVA}{MANOVA}{multivariate \gls{ANOVA}}
+\newacronym{HMD}{HMD}{head mounted display}
+\newacronym{ITQ}{ITQ}{Immersive Tendency Questionnaire}
+
+\newacronym{IFSC}{IFSC}{International Federation of Sport Climbing}
+\newacronym{AQ}{AQ}{Acrophobia Questionnaire}
+\newacronym{AHQ}{AHQ}{Attitude Towards Heights Questionnaire}
+\newacronym{VAS}{VAS}{visual analog scale}
+
+\newacronym{SUDS}{SUDS}{subjective units of discomfort scale}
+
+\newacronym{BLE}{BLE}{Bluetooth Low Energy}
+
+\newacronym{IZOF}{IZOF}{individual zones of optimal functioning}
+
+% \newglossaryentry{JS}{type=\acronymtype, name={JS}, description={JavaScript}, nonumberlist=true}
+
+% \newglsacronym{IC}{IC}{title}{desc}
+
+\glsresetall

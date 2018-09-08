@@ -1,0 +1,26 @@
+\begin{subtable}[t]{0.49\textwidth}
+	\caption{GLIMMPSE sample size results}
+	\centering
+	\tablestyle{
+		\label{tab:glimmpse}
+		\begin{tabular}{@{}
+		l
+		l
+		S[table-format=1.1]
+		S[table-format=1.3]
+		S[table-format=1.0]@{}}
+			\toprule
+			{\thead{α}}                   & {\thead{f\textsubscript{v}}} & {\thead{f\textsubscript{m}}} & {\thead{Power}} & {\thead{Sample}} \\ \midrule
+			\multirow{9}{*}[-0.5em]{0.05} & \multirow{3}{*}{0.5}                  & 0.8                            & 0.815           & 9                     \\
+			                              &                                       & 1.0                            & 0.852           & 7                     \\
+			                              &                                       & 1.2                            & 0.899           & 6                     \\
+			\cmidrule{2-5}                & \multirow{3}{*}{1.0}                  & 0.8                            & 0.831           & 16                    \\
+			                              &                                       & 1.0                            & 0.824           & 11                    \\
+			                              &                                       & 1.2                            & 0.867           & 9                     \\
+			\cmidrule{2-5}                & \multirow{3}{*}{2.0}                  & 0.8                            & 0.805           & 28                    \\
+			                              &                                       & 1.0                            & 0.810           & 19                    \\
+			                              &                                       & 1.2                            & 0.812           & 14                    \\ \bottomrule
+             \multicolumn{5}{l}{\parbox{0.9\textwidth}{\vspace{0.2cm}\footnotesize \textcolor{gray}{f\textsubscript{m} and f\textsubscript{v} are scale factors for mean values and variance to simulate different scenarios}}}
+		\end{tabular}
+}
+\end{subtable}
