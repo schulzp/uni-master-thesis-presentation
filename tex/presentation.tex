@@ -9,11 +9,10 @@ pdfkeywords={Sport Climbing;Virtual Reality;Mixed Reality;Passive Haptics;Presen
 pdfencoding=auto},
 url={obeyspaces,spaces,hyphens}]{beamer}
 
-\usepackage{fontspec}
 \usepackage{polyglossia,csquotes}
 \setdefaultlanguage{german}
 
-\usetheme{metropolis}
+\usetheme[numbering=fraction]{metropolis}
 \usepackage{appendixnumberbeamer}
 
 \usepackage{booktabs}
@@ -26,7 +25,7 @@ url={obeyspaces,spaces,hyphens}]{beamer}
 \usepackage{cancel}
 
 \usepackage{subcaption}
-\usepackage{graphicx}
+\usepackage{graphicx,graphbox}
 \usepackage[percent]{overpic}
 
 \usepackage[absolute,overlay]{textpos}
@@ -55,7 +54,12 @@ isbn=false,
 backref=false,
 giveninits=true,
 block=none]{biblatex}
-\bibliography{../master-thesis/tex/master-thesis}
+\bibliography{../../master-thesis/tex/master-thesis}
+
+\usepackage[xindy,acronym,style=index,nonumberlist,seeautonumberlist,toc]{glossaries}
+\makeglossaries
+
+\input{../../master-thesis/tex/include/glossary}
 
 %fontspec
 \defaultfontfeatures{Ligatures=TeX}
@@ -83,7 +87,7 @@ BoldItalicFont=*-SemiboldIt
 \setmonofont[Scale=MatchLowercase]{Consolas}
 
 %xcolor
-\definecolor{source}{gray}{.5}
+\definecolor{source}{gray}{.6}
 \definecolor{tracker}{RGB}{188,31,59}
 
 %overpic
@@ -96,9 +100,17 @@ BoldItalicFont=*-SemiboldIt
 \setbeamercolor{titlelike}{fg=tracker}
 \setbeamercolor{item}{fg=tracker}
 \setbeamercolor{block title}{fg=tracker}
-\setbeamercolor{title separator}{fg=tracker,bg=tracker}
+\setbeamercolor{title separator}{fg=tracker,bg=source}
+\setbeamercolor{progress bar}{fg=tracker,bg=source}
 
 \usepackage{multirow,makecell,tabularx}
+
+\makeatletter
+\let\th@plain\relax
+\makeatother
+\usepackage{ntheorem}
+\theoremstyle{plain}
+\newtheorem*{hyp*}{Hypothese}
 
 \setbeamertemplate{title page}{
 	\begin{minipage}[b][\paperheight]{\textwidth}
@@ -117,8 +129,8 @@ BoldItalicFont=*-SemiboldIt
 		\vspace*{2mm}
 		\begin{tabularx}{0.795\textwidth}{@{\hspace{0.205\textwidth}}Xr@{}}
 			Peter Schulz & Prof. Dr. Rainer Malaka\\
-			\textcolor{gray}{Fakultät für Mathematik} & Prof. Dr. Johannes Schöning\\
-			\textcolor{gray}{und Informatik} & Dmitry Alexandrovsky\\
+			\textcolor{source}{Fakultät für Mathematik} & Prof. Dr. Johannes Schöning\\
+			\textcolor{source}{und Informatik} & Dmitry Alexandrovsky\\
 		\end{tabularx}
 		\vfill
 		\vspace*{3mm}
@@ -127,14 +139,33 @@ BoldItalicFont=*-SemiboldIt
 
 \titlegraphic{\centering\includegraphics[width=0.6\textwidth]{include/images/title-headline.pdf}}
 
-\date{\today}
+\newcommand{\backupbegin}{
+	\newcounter{framenumberappendix}
+	\setcounter{framenumberappendix}{\value{framenumber}}
+}
+\newcommand{\backupend}{
+	\addtocounter{framenumberappendix}{-\value{framenumber}}
+	\addtocounter{framenumber}{\value{framenumberappendix}} 
+}
 
 \begin{document}
 	
 \maketitle
 
-\tableofcontents
-
 \input{include/frames}
+
+\appendix
+
+\begin{frame}[allowframebreaks]{Literaturverzeichnis}
+
+\printbibliography[heading=none]
+
+\end{frame}
+
+\backupbegin
+
+\frame{\frametitle{Da war noch was}}
+
+\backupend
 	
 \end{document}
