@@ -105,6 +105,14 @@ BoldItalicFont=*-SemiboldIt
 
 \usepackage{multirow,makecell,tabularx}
 
+\usepackage{siunitx}
+
+\let\olddescription\description
+\let\oldenddescription\enddescription
+\usepackage{enumitem}
+\let\description\olddescription
+\let\enddescription\oldenddescription
+
 \makeatletter
 \let\th@plain\relax
 \makeatother
