@@ -24,7 +24,6 @@ url={obeyspaces,spaces,hyphens}]{beamer}
 \usepackage{fontawesome}
 \usepackage{cancel}
 
-\usepackage{subcaption}
 \usepackage{graphicx,graphbox}
 \usepackage[percent]{overpic}
 
@@ -90,18 +89,24 @@ BoldItalicFont=*-SemiboldIt
 \definecolor{source}{gray}{.6}
 \definecolor{tracker}{RGB}{188,31,59}
 
+\definecolor{primary}{HTML}{2E4052}
+\definecolor{secondary}{HTML}{BC2233}
+\definecolor{tertiary}{HTML}{BC2233}
+
 %overpic
 \newcommand{\rbox}[3]{
 	\put(#1,#2){\makebox(100,100)[rb]{#3}}
 }
 
-\setbeamercolor{palette secondary}{fg=tracker}
-\setbeamercolor{palette tertiary}{bg=tracker}
-\setbeamercolor{titlelike}{fg=tracker}
-\setbeamercolor{item}{fg=tracker}
-\setbeamercolor{block title}{fg=tracker}
-\setbeamercolor{title separator}{fg=tracker,bg=source}
-\setbeamercolor{progress bar}{fg=tracker,bg=source}
+\setbeamercolor{palette primary}{bg=primary}
+\setbeamercolor{palette secondary}{fg=secondary}
+\setbeamercolor{palette tertiary}{bg=tertiary}
+
+\setbeamercolor{titlelike}{fg=secondary}
+\setbeamercolor{item}{fg=secondary}
+\setbeamercolor{block title}{fg=secondary}
+\setbeamercolor{title separator}{fg=tertiary,bg=source}
+\setbeamercolor{progress bar}{fg=tertiary,bg=source}
 
 \usepackage{multirow,makecell,tabularx}
 
@@ -112,6 +117,12 @@ BoldItalicFont=*-SemiboldIt
 \usepackage{enumitem}
 \let\description\olddescription
 \let\enddescription\oldenddescription
+
+% (sub)section names: https://tex.stackexchange.com/a/75183/152250
+\usepackage{nameref}
+\makeatletter
+\newcommand*{\currentname}{\@currentlabelname}
+\makeatother
 
 \makeatletter
 \let\th@plain\relax
