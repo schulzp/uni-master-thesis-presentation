@@ -1,20 +1,18 @@
 \section{Einleitung}
 
-\begin{frame}{Motivation -- Zur Person}
-  \begin{columns}
-	\begin{column}{0.4\textwidth}
-		\begin{itemize}[label=\textcolor{tertiary}{\faicon{caret-right}}]
-			\item Kletterer seit 20 Jahren
-			\item Jugendleiter für Sportklettern
-			\item mehrere eigene Forschungsprojekte
-		\end{itemize}
-	\end{column}
-	\begin{column}{0.5\textwidth}
-		\begin{center}
-			\includegraphics[width=0.8\columnwidth]{include/images/climbing-shoe-with-instructions-on.pdf}
-		\end{center}
-	\end{column}
-\end{columns}
+\begin{frame}[standout]
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}[t]{0.49\columnwidth}
+		\centering
+		\includegraphics[angle=7,width=\textwidth]{include/images/1997.jpg}
+	\end{subfigure}
+	\hspace*{\fill}
+	\begin{subfigure}[t]{0.49\columnwidth}
+		\centering
+		\includegraphics[angle=-5,width=\textwidth]{include/images/2002.jpg}
+	\end{subfigure}
+\end{figure}
 \end{frame}
 
 \begin{frame}{Eigene Forschungsprojekte -- Imagery in Sport Climbing}
@@ -59,54 +57,59 @@
 \end{figure}
 \end{frame}
 
-\begin{frame}{Motivation -- Grundlegende Fragestellung}
-\begin{columns}
-	\begin{column}{0.48\textwidth}
-		\begin{itemize}[label=\textcolor{tertiary}{\faicon{caret-right}}]
-			\item Forschungstrend \gls{VR}
-			\item erfolgreicher Einsatz von \textit{\gls{VRET}} insbesondere \textit{bei Höhenangst} \autocite{Emmelkamp2001}
-		\end{itemize}
-	\end{column}
-	\begin{column}{0.44\textwidth}
-		\vfill
-		\hfill
-		\begin{overpic}[width=0.9\columnwidth]{include/images/samsung-gear-acrophobia-original.jpg}
-			\rbox{-4}{1}{\textcolor{source}{\tiny{Quelle: \href{https://vrscout.com/projects/fear-of-heights-samsung-gear-vr/}{VRscout}}}}
-		\end{overpic}
-	\end{column}
-\end{columns}
-\vfill
-\metroset{block=fill}
-\begin{block}{Fragestellung}<2->
-	Lässt sich \textcolor{tertiary}{Sturzangst}, wie auch Höhenangst, \textcolor{tertiary}{in \gls{VR} auslösen?}\\Wenn ja, welche Faktoren sind maßgebend?
-	
-	\hfill $\rightarrow$ Ist \gls{VR} als Trainingsmethoden denkbar?
-\end{block}
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{include/images/honnold.jpg}}
+\begin{frame}{Höhenangst \textcolor{gray}{\&} \textcolor{tertiary}{Sturzangst}}
+\begin{textblock}{140}(5,83)
+	\textcolor{tertiary}{\textcopyright Jimmy Chin}
+	\href{http://www.accidentofgeography.com/alex-honnold-epic-el-capitan-triumph/}{www.accidentofgeography.com} 
+\end{textblock}
+\end{frame}
+}
+
+{
+	\usebackgroundtemplate{\movie[label=clip-1,width=\paperwidth,height=\paperheight,open,once,showcontrols=false]{\includegraphics[width=\paperwidth]{include/images/master-thesis-clip-1.jpg}}{include/videos/master-thesis-clip-1.mov}}
+	\begin{frame}[standout]
+	\end{frame}
+}
+
+\begin{frame}{Lässt sich \textcolor{tertiary}{Sturzangst}, wie auch Höhenangst, \textcolor{tertiary}{in VR} auslösen?}
+	\centering
+	\begin{overpic}[height=0.8\textheight]{include/images/samsung-gear-acrophobia-original.jpg}
+		\rbox{-4}{1}{\textcolor{source}{\tiny{Quelle: \href{https://vrscout.com/projects/fear-of-heights-samsung-gear-vr/}{VRscout}}}}
+	\end{overpic}
 \end{frame}
 
-\begin{frame}{Studien zum Thema}
+\begin{frame}{Related Work mit \textcolor{tertiary}{Höhen} und \textcolor{tertiary}{Kanten}}
 \begin{columns}
-	\begin{column}{0.5\textwidth}
-		\textbf{Studien zur Auswirkung von (Sturz-)Höhe beim Sportklettern}
-		\autocites{Hardy2007}{Pijpers2006,Pijpers2005,Pijpers2003}
+	\begin{column}{0.45\textwidth}
 		\begin{center}
-			\begin{overpic}[height=0.555\textheight]{include/images/pijpers.jpg}
+			\begin{overpic}[height=0.8\textheight]{include/images/pijpers.jpg}
 				\rbox{-15}{1}{\textcolor{black}{\tiny{Quelle: \href{https://www.researchgate.net/figure/Side-view-of-the-virtual-environment-Subjects-start-in-the-Training-Room-and-later-enter_fig1_247181822}{ResearchGate}}}}
 			\end{overpic}
 		\end{center}
 	\end{column}
-	\begin{column}{0.5\textwidth}
-		\textbf{Studien Auswirkung unterschiedlicher Faktoren auf das Präsenzerleben}\\
-		\autocite{Meehan2002,Meehan2001}
+	\begin{column}{0.55\textwidth}
 		\begin{center}
-			\begin{overpic}[height=0.53\textheight]{include/images/meehan.jpg}
+			\begin{overpic}[height=0.8\textheight]{include/images/meehan.jpg}
 				\rbox{-1}{1}{\textcolor{source}{\tiny{Quelle: \href{https://www.researchgate.net/figure/View-of-the-20-in-pit-from-the-wooden-ledge_fig3_7596875}{ResearchGate}}}}
 			\end{overpic}
 		\end{center}
-		\vfill
 	\end{column}
 \end{columns}
 \end{frame}
+
+{
+	\usebackgroundtemplate{\movie[label=clip-1,width=\paperwidth,height=\paperheight,open,once,showcontrols=false]{\includegraphics[width=\paperwidth]{include/images/master-thesis-clip-2.jpg}}{include/videos/master-thesis-clip-2.mov}}
+	\begin{frame}[standout]
+	\end{frame}
+}
+
+{
+	\usebackgroundtemplate{\movie[label=clip-1,width=\paperwidth,height=\paperheight,open,once,showcontrols=false]{\includegraphics[width=\paperwidth]{include/images/master-thesis-clip-3.jpg}}{include/videos/master-thesis-clip-3.mov}}
+	\begin{frame}[standout]
+	\end{frame}
+}
 
 \section{Studie}
 
@@ -131,35 +134,7 @@
 \end{columns}
 \end{frame}
 
-\begin{frame}[standout]
-	\begin{center}
-		{\fontsize{60}{60}\faicon{youtube-play}}
-	\end{center}
-\end{frame}
-
 \subsection{Technische Umsetzung}
-
-\begin{frame}{\currentname{} -- Benötigte Komponenten}
-
-\begin{description}
-	\item[Virutal Reality System]\mbox{}
-	\begin{itemize}
-		\item[\textit{Kopf + Füße}] HTC VIVE
-		\item[\textit{Hände}] LEAP Motion + \textbf{Unity Anbindung}
-	\end{itemize}
-	\item[Kletterrouten]\mbox{}
-	\begin{itemize}
-		\item[\textit{Real}] DAV Kletterzentrum Bremen + Eigene Griffe
-		\item[\textit{Virtuell}] \textbf{3D Modell} in Maya + Unity
-	\end{itemize}
-	\item[Messverfahren]\mbox{}
-	\begin{itemize}
-		\item[\textit{Selbstauskunft}] Lime Survey Software + \textbf{Anpassung}
-		\item[\textit{Biosignale}] BITalino +  wahoo TICKR X + \textbf{Android App}
-	\end{itemize}
-\end{description}
-
-\end{frame}
 
 \begin{frame}{\currentname{} -- Virtual Reality System}
 	\begin{figure}
@@ -251,33 +226,6 @@
 	\end{subfigure}
 	\label{fig:biosignals}
 \end{figure}
-\end{frame}
-
-\subsection{Methode}
-
-\begin{frame}[standout]
-\begin{center}
-			\parbox{0cm}{%
-		\LARGE
-		\begin{tabbing}
-			\faicon{check-square} \quad \= Technische Umsetzung\\
-			\faicon{square} \> Studiendurchführung
-		\end{tabbing}}
-\end{center}
-\end{frame}
-
-\begin{frame}{\currentname{} -- Ablauf}
-	\begin{enumerate}[label=\textbf\textcolor{tertiary}{\theenumi}]
-		\item Belehrung, Gurt anlegen, Elektroden anlegen
-		\item Vorabfragebogen zum allgemeinen Befinden (STAI-T)
-		\item Durchlaufen der Bedingungen A, B und C (randomisiert nach Latin Square)
-		\\Fragebögen im Anschluss an
-		\begin{itemize}
-			\item[\textit{A}] \gls{RPE} und \gls{AT}
-			\item[\textit{B, C}] \gls{IPQ}, \gls{RPE} und \gls{AT}
-		\end{itemize}
-		\item kurzes, mündliches Interview
-	\end{enumerate}
 \end{frame}
 
 \subsection{Ergebnisse}
