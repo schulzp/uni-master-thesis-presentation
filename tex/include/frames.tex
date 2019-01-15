@@ -4,7 +4,7 @@
   \begin{columns}
 	\begin{column}{0.4\textwidth}
 		\begin{itemize}[label=\textcolor{tertiary}{\faicon{caret-right}}]
-			\item Kletter seit 20 Jahren
+			\item Kletterer seit 20 Jahren
 			\item Jugendleiter für Sportklettern
 			\item mehrere eigene Forschungsprojekte
 		\end{itemize}
@@ -82,37 +82,6 @@
 	
 	\hfill $\rightarrow$ Ist \gls{VR} als Trainingsmethoden denkbar?
 \end{block}
-\end{frame}
-
-\begin{frame}{Verfeinerung der Fragestellung}
-Was ist (Sturz-)Angst und wie lässt sie sich messen?\\Wie vergleiche ich Angst im Realen mit Angst im Virtuellen?
-\begin{description}
-\item[Immersion]<2-> Die technischen Möglichkeiten in ein virtuelle Welt einzutauchen,\\z.B. Bildschirm, grafische Darstellung, Ton \autocite{McMahan2003}
-\item[Präsenz]<2-> Das aus Immersion resultierende Gefühl, vor Ort zu sein \autocite{McMahan2003}
-\item[Angst]<3-> Mehrdimensionales Phänomen: Psych. u. Phys. Symptome \autocite{Krohne1996}
-\item[Sturzangst]<3-> Angst vor dem Unkontrollierten, einer Verletzung \autocite{Lewis2010}
-\end{description}
-\begin{center}
-	\only<4->{\large\textbf{Angeonommener Zusammenhang}\\Immersion $\sim$ Präsenz $\sim$ Angst }
-\end{center}
-\end{frame}
-
-\begin{frame}{Forschungsfrage}
-\begin{center}
-	\LARGE
-	$\substack{\text{Immersion}\\(\text{variieren})} \sim \substack{\text{Präsenz}\\(\text{messen})} \sim \substack{\text{Angst}\\(\text{messen})}$
-\end{center}
-\metroset{block=fill}
-\begin{center}
-	\begin{minipage}{0.7\textwidth}
-		\begin{block}{Alternativ-Hypothese (H\textsubscript{a}\label{hyp:anxiety})}<2->
-			Das \textcolor{tertiary}{Präsenz}erleben von KletterInnen in \gls{VR} \textbf{steigt} wenn sie sich tatsächlich festhalten müssen, da dies die \textcolor{tertiary}{Immersion} \textbf{erhöht} und damit die \textcolor{tertiary}{Angst} \textbf{vergrößert}.
-		\end{block}
-		\begin{block}{Null-Hypothese (H\textsubscript{0}\label{hyp:anxiety})}<2->
-			Es gibt keinen messbaren Unterschied zwischen Klettern in \gls{VR} mit \textcolor{tertiary}{Griffen und Tritten} gegenüber Klettern in \gls{VR} mit \textcolor{tertiary}{Game Controllern}.
-		\end{block}
-	\end{minipage}
-\end{center}
 \end{frame}
 
 \begin{frame}{Studien zum Thema}
@@ -324,20 +293,65 @@ Was ist (Sturz-)Angst und wie lässt sie sich messen?\\Wie vergleiche ich Angst 
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{\currentname{} -- Messgrößen}
+\begin{frame}{\currentname{} -- Vergleichbarkeit}
 \begin{tabbing}
-	\textcolor{secondary}{\faicon{question-circle}} \quad \= Welchen Effekt hat die Bedingung (Griffe|Controller) auf Immersion/Präsenz/Angst?\\
-	\mbox{} \> Was bleibt gleich, was ändert sich und was kann ich vergleichen?
+	\textcolor{primary}{\faicon{question-circle}} \quad \= Welchen Effekt hat die Bedingung (Griffe/Tritte|Controller) auf Präsenz/Angst?
 \end{tabbing}
+	\only<2->{\input{include/figures/physical-exertion.tex}}
+\end{frame}
 
-\begin{itemize}[label=\textcolor{tertiary}{\faicon{caret-right}}]
+\begin{frame}{\currentname{} -- Angst}
+\input{include/figures/stress-anxiety.tex}
+\end{frame}
 
-\end{itemize}
+\begin{frame}{\currentname{} -- Präsenz}
+\input{include/figures/presence.tex}
 \end{frame}
 
 \subsection{Diskussion}
 
+\begin{frame}{\currentname{} -- Mehrdeutigkeit}
+\begin{tabbing}
+	\textcolor{primary}{\faicon{question-circle}} \quad \= Welchen Effekt hat die Bedingung (Griffe/Tritte|Controller) auf Präsenz/Angst?
+\end{tabbing}
+\begin{description}
+	\item[Präsenz/Angst]\mbox{}
+	\begin{itemize}
+		\item[\textit{Psych.}] Griffe/Tritte $\rightarrow$ \textbf{erhöhte} Präsenz u. Angst
+		\item[\textit{Phys.}] \textbf{kein Unterschied} messbar zw. Griffe/Tritte|Controller
+	\end{itemize}
+\end{description}
+\end{frame}
+
+\begin{frame}{\currentname{} -- Welche Angst?}
+\begin{description}
+	\item[Selbstwahrnehmung]\mbox{}
+	\begin{itemize}[label=\textcolor{tertiary}{\faicon{caret-right}}]
+		\item Auslöser unklar, nicht zwingend Sturzangst
+		\item Alternativer Ursprung: Unsicherheit mit VR System
+	\end{itemize}
+	\item[Biosignale]\mbox{}
+	\begin{itemize}[label=\textcolor{tertiary}{\faicon{caret-right}}]
+		\item Hautleitfähigkeit zeigt keine konsistente Veränderung
+		\item Vermutung: Durchschnittswerte unpassend; Bewegungsartefakte
+	\end{itemize}
+\end{description}
+\end{frame}
+
 \section{Fazit und Ausblick}
+
+\begin{frame}{\currentname{}}
+	\textbf{Höhen-, Flug-, \textcolor{secondary}{und Sturzangst?}}
+	\begin{itemize}[label=\textcolor{tertiary}{\faicon{caret-right}}]
+		\item Ja und nein $\rightarrow$ mehr Forschung nötig zu Angst + physische Aktivität
+	\end{itemize}
+	\textbf{Technologischer Mehrwert}
+	\begin{itemize}[label=\textcolor{tertiary}{\faicon{caret-right}}]
+		\item neuartige, präzise Darstellung von Händen in VR zur physischen Interaktion
+	\end{itemize}
+	\vfill{}
+	\hfill{}\textit{VR \xcancel{Therapie} Training für Sturzangst bleibt Zukunftsmusik} \textcolor{secondary}{\faicon{sign-out}}
+\end{frame}
 
 \begin{frame}[plain]
 \begin{center}
