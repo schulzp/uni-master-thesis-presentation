@@ -1,4 +1,13 @@
-\section{Einleitung}
+%\section{Einleitung}
+
+{
+	\usebackgroundtemplate{\includegraphics[width=\paperwidth]{include/images/honnold.jpg}}
+	\begin{frame}[standout]
+		\begin{textblock}{50}(-10,83)
+			\href{http://www.accidentofgeography.com/alex-honnold-epic-el-capitan-triumph/}{	\textcolor{tertiary}{{\small \textcopyright Jimmy Chin}}} 
+		\end{textblock}
+	\end{frame}
+}
 
 \begin{frame}[standout]
 \begin{figure}[h]
@@ -14,58 +23,6 @@
 	\end{subfigure}
 \end{figure}
 \end{frame}
-
-\begin{frame}{Eigene Forschungsprojekte -- Imagery in Sport Climbing}
-\begin{figure}[h]
-	\centering
-	\begin{subfigure}[t]{0.49\columnwidth}
-		\centering
-		\begin{overpic}[width=\textwidth]{include/images/Google-Glass.jpg}
-			\rbox{-1}{1}{\textcolor{source}{\tiny{Quelle: \href{https://de.wikipedia.org/wiki/Datei:Google_Glass_Main.jpg}{Wikipedia}}}}
-		\end{overpic}
-		\label{fig:google-glass}
-	\end{subfigure}
-	\hspace*{\fill}
-	\begin{subfigure}[t]{0.49\columnwidth}
-		\centering
-		\includegraphics[width=\textwidth]{include/images/Live-Video.jpg}
-		\label{fig:live-video-action}
-	\end{subfigure}
-	\caption{Livebildübertragung vom Smartphone (Kamera) an Google Glass Brille (Display). \\Die Kletterin kann sich selbst beim Klettern sehen, während sie klettert.}
-	\label{fig:live-video}
-\end{figure}
-\end{frame}
-
-\begin{frame}{Eigene Forschungsprojekte -- Crimp\textcolor{tertiary}{Bit}}
-\begin{figure}[h]
-	\centering
-	\begin{subfigure}[t]{0.35\columnwidth}
-		\centering
-		\begin{overpic}[width=\textwidth]{include/images/myo-armband.jpg}
-			\rbox{-9}{1}{\textcolor{source}{\tiny{Quelle: \href{https://www.myo.com}{Thalmic Labs Inc.}}}}
-		\end{overpic}
-		\label{fig:myo-armband}
-	\end{subfigure}
-	\hspace*{\fill}
-	\begin{subfigure}[t]{0.62\columnwidth}
-		\centering
-		\includegraphics[width=\textwidth]{include/images/myo-demo.jpg}
-		\label{fig:crimpbit-demo}
-	\end{subfigure}
-	\caption{MYO Armband zur Gestenerkennung als Sensor für potentiell schädliche Greifbewegungen.}
-	\label{fig:crimpbit}
-\end{figure}
-\end{frame}
-
-{
-\usebackgroundtemplate{\includegraphics[width=\paperwidth]{include/images/honnold.jpg}}
-\begin{frame}{Höhenangst \textcolor{gray}{\&} \textcolor{tertiary}{Sturzangst}}
-\begin{textblock}{140}(5,83)
-	\textcolor{tertiary}{\textcopyright Jimmy Chin}
-	\href{http://www.accidentofgeography.com/alex-honnold-epic-el-capitan-triumph/}{www.accidentofgeography.com} 
-\end{textblock}
-\end{frame}
-}
 
 {
 	\usebackgroundtemplate{\movie[label=clip-1,width=\paperwidth,height=\paperheight,open,once,showcontrols=false]{\includegraphics[width=\paperwidth]{include/images/master-thesis-clip-1.jpg}}{include/videos/master-thesis-clip-1.mov}}
@@ -111,7 +68,7 @@
 	\end{frame}
 }
 
-\section{Studie}
+%\section{Studie}
 
 \begin{frame}{Versuchsbedingungen}
 \begin{columns}
@@ -242,10 +199,10 @@
 \end{frame}
 
 \begin{frame}{\currentname{} -- Vergleichbarkeit}
-\begin{tabbing}
-	\textcolor{primary}{\faicon{question-circle}} \quad \= Welchen Effekt hat die Bedingung (Griffe/Tritte|Controller) auf Präsenz/Angst?
-\end{tabbing}
-	\only<2->{\input{include/figures/physical-exertion.tex}}
+	\begin{tabbing}
+		\textcolor{primary}{\faicon{question-circle}} \quad \= \large Welchen Effekt hat die Bedingung (Griffe/Tritte|Controller) auf Präsenz/Angst?
+	\end{tabbing}
+	\input{include/figures/physical-exertion.tex}
 \end{frame}
 
 \begin{frame}{\currentname{} -- Angst}
@@ -263,46 +220,60 @@
 	\textcolor{primary}{\faicon{question-circle}} \quad \= Welchen Effekt hat die Bedingung (Griffe/Tritte|Controller) auf Präsenz/Angst?
 \end{tabbing}
 \begin{description}
-	\item[Präsenz/Angst]\mbox{}
+	\item[Präsenzerleben in VR \& Angst]\mbox{}
 	\begin{itemize}
-		\item[\textit{Psych.}] Griffe/Tritte $\rightarrow$ \textbf{erhöhte} Präsenz u. Angst
-		\item[\textit{Phys.}] \textbf{kein Unterschied} messbar zw. Griffe/Tritte|Controller
+		\item[\textit{Psychologisch}] Griffe/Tritte $\rightarrow$ \textbf{erhöhte} Präsenz u. Angst\\
+		\temporal<2>{\textcolor{white}{...}}{\textcolor{secondary}{Auslöser unklar, nicht zwingend Sturzangst}}{\textcolor{gray}{Auslöser unklar, nicht zwingend Sturzangst}}
+		\item[\textit{Physiologisch}] \textbf{kein Unterschied} messbar zw. Griffe/Tritte|Controller\\
+		\temporal<3>{\textcolor{white}{...}}{\textcolor{secondary}{Keine Änderung der Hautleitfähigkeit; Bewegungsartefakte?}}{Keine Änderung der Hautleitfähigkeit; Bewegungsartefakte?}
 	\end{itemize}
 \end{description}
 \end{frame}
 
-\begin{frame}{\currentname{} -- Welche Angst?}
-\begin{description}
-	\item[Selbstwahrnehmung]\mbox{}
-	\begin{itemize}[label=\textcolor{tertiary}{\faicon{caret-right}}]
-		\item Auslöser unklar, nicht zwingend Sturzangst
-		\item Alternativer Ursprung: Unsicherheit mit VR System
-	\end{itemize}
-	\item[Biosignale]\mbox{}
-	\begin{itemize}[label=\textcolor{tertiary}{\faicon{caret-right}}]
-		\item Hautleitfähigkeit zeigt keine konsistente Veränderung
-		\item Vermutung: Durchschnittswerte unpassend; Bewegungsartefakte
-	\end{itemize}
-\end{description}
-\end{frame}
+\subsection{Fazit und Ausblick}
 
-\section{Fazit und Ausblick}
+{
+	\setbeamertemplate{blocks}[default]
+	\setbeamercolor{block title}{bg=secondary}
+	\setbeamercolor{block body}{bg=white}
+	\setbeamercolor{frametitle}{fg=primary,bg=}
+	\addtobeamertemplate{block begin}{\pgfsetfillopacity{0.5}}{}
+	\usebackgroundtemplate{\includegraphics[width=\paperwidth]{include/images/alex-honnold-taft-point-yosemite-california.jpg}}
+	\begin{frame}[plain]{\color{primary}{Fazit \& Ausblick}}
+	
+	\begin{columns}
+		\begin{column}{0.4\textwidth}
 
-\begin{frame}{\currentname{}}
-	\textbf{Höhen-, Flug-, \textcolor{secondary}{und Sturzangst?}}
-	\begin{itemize}[label=\textcolor{tertiary}{\faicon{caret-right}}]
-		\item Ja und nein $\rightarrow$ mehr Forschung nötig zu Angst + physische Aktivität
-	\end{itemize}
-	\textbf{Technologischer Mehrwert}
-	\begin{itemize}[label=\textcolor{tertiary}{\faicon{caret-right}}]
-		\item neuartige, präzise Darstellung von Händen in VR zur physischen Interaktion
-	\end{itemize}
-	\vfill{}
-	\hfill{}\textit{VR \xcancel{Therapie} Training für Sturzangst bleibt Zukunftsmusik} \textcolor{secondary}{\faicon{sign-out}}
-\end{frame}
+		\end{column}
+		\begin{column}{0.6\textwidth}
+			\begin{exampleblock}{}<2->
+				\textbf{Höhen-, Flug-, \textcolor{secondary}{und Sturzangst?}}
+				\begin{itemize}[label=\textcolor{tertiary}{\faicon{caret-right}}]
+					\item Ja und nein $\rightarrow$ mehr Forschung nötig\\zu Angst + physische Aktivität
+				\end{itemize}
+				\textbf{Technologischer Mehrwert}
+				\begin{itemize}[label=\textcolor{tertiary}{\faicon{caret-right}}]
+					\item neuartige, präzise Darstellung von Händen in VR\\zur physischen Interaktion
+				\end{itemize}
+				\textbf{Veröffentlichung auf der \textcolor{secondary}{CHI 2019}}
+				\begin{itemize}[label=\textcolor{tertiary}{\faicon{caret-right}}]
+					\item Weitere Arbeiten zu Klettern + VR
+				\end{itemize}
+			\end{exampleblock}
+		\end{column}
+	\end{columns}
+	
+	\begin{textblock}{50}(5,83)
+		\href{http://www.accidentofgeography.com/alex-honnold-epic-el-capitan-triumph/}{	\textcolor{tertiary}{{\small \textcopyright Jimmy Chin}}} 
+	\end{textblock}
+	\end{frame}
+}
 
 \begin{frame}[plain]
 \begin{center}
 	\includegraphics[width=0.8\textwidth]{include/images/climbing-shoe-with-instructions-off.pdf}
+	\begin{textblock}{60}(20,58)
+			\includegraphics[width=\textwidth]{include/images/Logo-Grau.pdf}
+	\end{textblock}
 \end{center}
 \end{frame}
